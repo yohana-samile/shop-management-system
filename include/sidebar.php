@@ -31,7 +31,8 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../../asset/css/sb-admin-2.min.css" rel="stylesheet"><!-- Page level plugins -->
+    <link href="../../asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Page level plugins -->
     <!-- <script src="../../asset/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../../asset/vendor/datatables/dataTables.bootstrap4.min.js"></script> -->
 
@@ -41,9 +42,7 @@
     <script src="../../asset/js/sb-admin-2.min.js"></script> -->
 
     <!-- Custom styles for this page -->
-    <link href="../asset/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-    
+    <link href="../asset/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">    
     <script src="../asset/vendor/jquery/jquery.min.js"></script>
 </head>
 
@@ -57,7 +56,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../view/index.php">
-                <div class="sidebar-brand-text mx-3"><h2>SmS</h2></div>
+                <div class="sidebar-brand-text mx-3"><small><p>Shop Management System</p></small></div>
             </a>
 
             <!-- Divider -->

@@ -54,7 +54,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../view/index.php">
-                <div class="sidebar-brand-text mx-3"><h2>SmS</h2></div>
+                <div class="sidebar-brand-text mx-3"><small><p>Shop Management System</p></small></div>
             </a>
 
             <!-- Divider -->

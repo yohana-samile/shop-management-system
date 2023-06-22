@@ -28,7 +28,7 @@
                         <tbody>
                             <?php
                                 $sn = 1;
-                                $getProductCategoryRecord = $conn->query("SELECT producttocart.cartId, product.productName, producttocart.productQuantity, producttocart.productPrice, producttocart.status, producttocart.dateProductAddedInCart, producttocart.dateSold FROM producttocart, product WHERE 
+                                $getProductCategoryRecord = $conn->query("SELECT product.productId, producttocart.cartId, product.productName, producttocart.productQuantity, producttocart.productPrice, producttocart.status, producttocart.dateProductAddedInCart, producttocart.dateSold FROM producttocart, product WHERE 
                                     producttocart.product = `product`.productId AND
                                     `producttocart`.status = 'sold' ");
                                 if(mysqli_num_rows($getProductCategoryRecord) > 0):
@@ -43,6 +43,10 @@
                                             <td><?php echo $productCategoryResult['dateSold']; ?></td>
                                             <td>
                                                 <?php if($_SESSION['userData']['roleName'] == 'administrator' || $_SESSION['userData']['roleName'] == 'cashier'): ?>
+                                                    <form action="ex.php?productId=<?php echo $productCategoryResult['productId']; ?>" method="post">
+                                                        <input type="hidden" value="" id="hidden-type" name="ExportToExcel" />
+                                                        <input type="submit" name="ExportType" class="btn btn-success text-white float-right" value="export excel">
+                                                </form>
                                                     <small><a onclick="printAppoitment()" class="btn btn-primary text-white">Print Reciept <i class="fa fa-print"></i></a></small>
                                                 <?php endif; ?>
                                             </td>
