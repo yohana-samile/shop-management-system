@@ -26,6 +26,13 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     <h1 class="h4 text-gray-900 mb-4">Shop Management System</h1>
+                                    <?php if(isset($_GET['key'])): ?>
+                                        <div class="container col-md-12">
+                                            <div class="alert alert-danger text-strong">
+                                                Wrong username or password
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                                 <form action="controller/loginAction.php" method="post" class="user">
                                     <div class="form-group">

@@ -8,7 +8,7 @@
                     require_once('../../include/messages.php');
                     if(isset($_GET['key'])){}
                 ?>
-                <h6 class="m-0 font-weight-bold text-primary">Product </h6>
+                <h6 class="m-0 font-weight-bold text-primary">Product Cart</h6>
                 <a href="" data-toggle="modal" data-target="#newProduct" class="btn btn-primary text-white float-right">Buy All</a>
             </div>
             <div class="card-body">

@@ -12,12 +12,12 @@
         $registerCategory = $conn->query("INSERT INTO `systemlogs` VALUES (null, 'Register Product Category', '$addedBy', '$dateCategoryAdded') ");
         if($registerCategory){
             $_SESSION['success'] = "New Category Product Registered";
-            header('location:../view/productCategories.php?key=success');
+            header('location:../view/?key=success');
         }
         else{            
             $conn->query("INSERT INTO systemlogs VALUES(NULL, 'Fail To Register Product Category', '$addedBy', current_timestamp()) ");
             $_SESSION['error'] = "Fail In Registration, Try Again";
-            header('location:../view/productCategories.php?key=error');
+            header('location:../view/?key=error');
         }
     }
 ?>

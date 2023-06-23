@@ -43,9 +43,9 @@
                                             <td><?php echo $productCategoryResult['dateSold']; ?></td>
                                             <td>
                                                 <?php if($_SESSION['userData']['roleName'] == 'administrator' || $_SESSION['userData']['roleName'] == 'cashier'): ?>
-                                                    <form action="ex.php?productId=<?php echo $productCategoryResult['productId']; ?>" method="post">
+                                                    <form hidden action="ex.php?productId=<?php echo $productCategoryResult['productId']; ?>" method="post">
                                                         <input type="hidden" value="" id="hidden-type" name="ExportToExcel" />
-                                                        <input type="submit" name="ExportType" class="btn btn-success text-white float-right" value="export excel">
+                                                        <input type="submit" name="ExportType" class="btn btn-success text-white float-right" value="generate pdf">
                                                 </form>
                                                     <small><a onclick="printAppoitment()" class="btn btn-primary text-white">Print Reciept <i class="fa fa-print"></i></a></small>
                                                 <?php endif; ?>
@@ -56,6 +56,34 @@
                     </table>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="" hidden>
+        <div id="printAppoitment">
+            <?php 
+                $get = $conn->query("SELECT product.productId, producttocart.cartId, product.productName, producttocart.productQuantity, producttocart.productPrice, producttocart.status, producttocart.dateProductAddedInCart, producttocart.dateSold FROM producttocart, product WHERE 
+                producttocart.product = `product`.productId AND
+                `producttocart`.status = 'sold' ");
+                $data = mysqli_fetch_assoc($get);
+                
+            ?>
+            <h2>This is Your Reciept</h2>
+            <hr>
+            <tr>
+                <td><?php echo $data['productName']; ?></td><br>
+                <hr>
+                <td><?php echo $data['productQuantity']; ?></td><br>
+                <hr>
+                <td><?php echo $data['productPrice']; ?></td><br>
+                <hr>
+                <td><?php echo $data['status']; ?></td><br>
+                <hr>
+                <td><?php echo $data['dateProductAddedInCart']; ?></td><br>
+                <hr>
+                <td><?php echo $data['dateSold']; ?></td><br>
+            </tr>
+            <hr>
+            <h3>Thank you for using our service</h3>
         </div>
     </div>
 <?php require_once('../../include/footer.php'); ?>

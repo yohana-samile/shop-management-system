@@ -226,7 +226,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                <a class="dropdown-item" href="../view/myLogs.php">
+                                <a class="dropdown-item" href="myLogs.php">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
@@ -260,7 +260,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Tsh40,00</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -278,7 +278,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                     Earnings (Annual)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Tsh 215,000</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -318,6 +318,62 @@
             </div>
         </div>
         <!-- Content Row -->
+
+        <!-- second row -->
+        <!-- Content Row -->
+        <div class="row">
+            <!-- reports -->
+            <div class="col-xl-8 col-md-8 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    User report</div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <small>administrator</small><br>
+                                            <p>10</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <small>stooker keeper</small><br>
+                                            <p>07</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <small>cashier</small><br>
+                                            <p>05</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-8 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Product report</div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <small>available</small><br>
+                                            <p>610</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <small>sold</small><br>
+                                            <p>500</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end second row -->
     </div>
     <!-- /.container-fluid -->
 

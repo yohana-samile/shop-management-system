@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2023 at 02:20 PM
+-- Generation Time: Jun 22, 2023 at 02:38 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,7 +31,7 @@ CREATE TABLE `product` (
   `productId` int(11) NOT NULL,
   `productName` text NOT NULL,
   `productCategory` int(11) NOT NULL,
-  `productUnit` text NOT NULL,
+  `productUnit` int(11) NOT NULL,
   `productsInStock` int(11) NOT NULL DEFAULT 1,
   `productPrice` int(11) NOT NULL,
   `status` varchar(100) NOT NULL DEFAULT 'on stock',
@@ -45,13 +45,13 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`productId`, `productName`, `productCategory`, `productUnit`, `productsInStock`, `productPrice`, `status`, `productRegisteredBy`, `dateProductAdded`, `dateProductModified`) VALUES
-(1, 'azam energy', 1, '14', 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
-(2, 'tunda', 18, '14', 12, 700, 'on stock', 1, '2023-06-21 20:54:34', '0000-00-00 00:00:00'),
-(3, 'azam energy', 1, '14', 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
-(4, 'azam energy', 1, '14', 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
-(5, 'azam energy', 1, '14', 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
-(6, 'apple punch', 1, '16', 50, 500, 'on stock', 4, '2023-06-22 12:57:34', '0000-00-00 00:00:00'),
-(7, 'azam cola', 1, '16', 13, 600, 'on stock', 1, '2023-06-22 12:57:34', '0000-00-00 00:00:00');
+(1, 'azam energy', 1, 14, 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
+(2, 'tunda', 18, 14, 12, 700, 'on stock', 1, '2023-06-21 20:54:34', '0000-00-00 00:00:00'),
+(3, 'azam energy', 1, 14, 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
+(4, 'azam energy', 1, 14, 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
+(5, 'azam energy', 1, 14, 50, 500, 'on stock', 1, '2023-06-21 20:39:38', '0000-00-00 00:00:00'),
+(6, 'apple punch', 1, 16, 50, 500, 'on stock', 4, '2023-06-22 12:57:34', '0000-00-00 00:00:00'),
+(7, 'azam cola', 1, 16, 13, 600, 'on stock', 1, '2023-06-22 12:57:34', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -279,7 +279,14 @@ INSERT INTO `systemlogs` (`logId`, `actionPerformed`, `performedBy`, `dateTimePe
 (127, 'login in the system', 3, '2023-06-22 13:46:42'),
 (128, 'logout', 3, '2023-06-22 13:48:08'),
 (129, 'login in the system', 1, '2023-06-22 13:52:06'),
-(130, 'logout', 1, '2023-06-22 14:32:26');
+(130, 'logout', 1, '2023-06-22 14:32:26'),
+(131, 'login in the system', 1, '2023-06-22 15:23:26'),
+(132, 'logout', 1, '2023-06-22 15:29:55'),
+(133, 'login in the system', 1, '2023-06-22 15:30:09'),
+(134, 'logout', 1, '2023-06-22 15:30:10'),
+(135, 'login in the system', 1, '2023-06-22 15:30:16'),
+(136, 'logout', 1, '2023-06-22 15:30:21'),
+(137, 'login in the system', 1, '2023-06-22 15:31:17');
 
 -- --------------------------------------------------------
 
@@ -342,37 +349,45 @@ INSERT INTO `userrole` (`roleId`, `roleName`, `dateAdded`, `dateModified`) VALUE
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`productId`);
+  ADD PRIMARY KEY (`productId`),
+  ADD KEY `productCategory` (`productCategory`),
+  ADD KEY `productUnit` (`productUnit`),
+  ADD KEY `productRegisteredBy` (`productRegisteredBy`);
 
 --
 -- Indexes for table `productcategory`
 --
 ALTER TABLE `productcategory`
-  ADD PRIMARY KEY (`categoryId`);
+  ADD PRIMARY KEY (`categoryId`),
+  ADD KEY `addedBy` (`addedBy`);
 
 --
 -- Indexes for table `producttocart`
 --
 ALTER TABLE `producttocart`
-  ADD PRIMARY KEY (`cartId`);
+  ADD PRIMARY KEY (`cartId`),
+  ADD KEY `product` (`product`);
 
 --
 -- Indexes for table `productUnit`
 --
 ALTER TABLE `productUnit`
-  ADD PRIMARY KEY (`unitId`);
+  ADD PRIMARY KEY (`unitId`),
+  ADD KEY `addedBy` (`addedBy`);
 
 --
 -- Indexes for table `systemlogs`
 --
 ALTER TABLE `systemlogs`
-  ADD PRIMARY KEY (`logId`);
+  ADD PRIMARY KEY (`logId`),
+  ADD KEY `performedBy` (`performedBy`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`userId`);
+  ADD PRIMARY KEY (`userId`),
+  ADD KEY `position` (`position`);
 
 --
 -- Indexes for table `userrole`
@@ -412,7 +427,7 @@ ALTER TABLE `productUnit`
 -- AUTO_INCREMENT for table `systemlogs`
 --
 ALTER TABLE `systemlogs`
-  MODIFY `logId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `logId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -425,6 +440,48 @@ ALTER TABLE `user`
 --
 ALTER TABLE `userrole`
   MODIFY `roleId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`productCategory`) REFERENCES `productcategory` (`categoryId`),
+  ADD CONSTRAINT `product_ibfk_2` FOREIGN KEY (`productUnit`) REFERENCES `productUnit` (`unitId`),
+  ADD CONSTRAINT `product_ibfk_3` FOREIGN KEY (`productRegisteredBy`) REFERENCES `user` (`userId`);
+
+--
+-- Constraints for table `productcategory`
+--
+ALTER TABLE `productcategory`
+  ADD CONSTRAINT `productcategory_ibfk_1` FOREIGN KEY (`addedBy`) REFERENCES `user` (`userId`);
+
+--
+-- Constraints for table `producttocart`
+--
+ALTER TABLE `producttocart`
+  ADD CONSTRAINT `producttocart_ibfk_1` FOREIGN KEY (`product`) REFERENCES `product` (`productId`);
+
+--
+-- Constraints for table `productUnit`
+--
+ALTER TABLE `productUnit`
+  ADD CONSTRAINT `productUnit_ibfk_1` FOREIGN KEY (`addedBy`) REFERENCES `user` (`userId`);
+
+--
+-- Constraints for table `systemlogs`
+--
+ALTER TABLE `systemlogs`
+  ADD CONSTRAINT `systemlogs_ibfk_1` FOREIGN KEY (`performedBy`) REFERENCES `user` (`userId`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`position`) REFERENCES `userrole` (`roleId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

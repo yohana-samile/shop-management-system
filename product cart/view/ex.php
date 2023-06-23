@@ -9,8 +9,6 @@
     while( $productCategoryResult = mysqli_fetch_assoc($sql_query) ) {
         $tasks[] = $productCategoryResult;
     }
-
-
     if(isset($_POST["ExportType"])){
         @header("Content-Disposition: attachment; filename=mysql_to_excel.pdf");
     }
