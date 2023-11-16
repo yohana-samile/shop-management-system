@@ -54,6 +54,21 @@ the customer. The system should also update the stock of each of the product sol
 The systems should enable the owner and the manager to see various reports, such as, the number of all
 the staff (categories according to roles, gender, etc); daily sales; etc.
 
+Application Details
+
+Backend PhP 
+
+Frontend Bootstrap 4
+
+Databases used MySQL
+
+Web Browser Mozilla, Google Chrome, OPERA
+
+Application Configurations
+XAMPP 8 or later installed
+Create database with the name shopmanagementsystem
+Google Chrome or any browser
+
 SCREENSHOT BELOW SHOW SYSTEM
 
 ![Screenshot from 2023-11-16 19-57-31](https://github.com/yohana-samile/shop-management-system/assets/99715781/b00f6c26-6b37-4212-9943-3c42dafc86ef)
