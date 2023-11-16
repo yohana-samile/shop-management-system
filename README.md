@@ -54,5 +54,45 @@ the customer. The system should also update the stock of each of the product sol
 The systems should enable the owner and the manager to see various reports, such as, the number of all
 the staff (categories according to roles, gender, etc); daily sales; etc.
 
+SCREENSHOT BELOW SHOW SYSTEM
+
+![Screenshot from 2023-11-16 19-57-31](https://github.com/yohana-samile/shop-management-system/assets/99715781/b00f6c26-6b37-4212-9943-3c42dafc86ef)
+
+fig 1. how user can login
+
+![Screenshot from 2023-11-16 20-04-54](https://github.com/yohana-samile/shop-management-system/assets/99715781/ee895778-00a6-4a78-8eb9-34d41fcb2cb6)
+fig 2. how home page
+
+![Screenshot from 2023-11-16 20-06-04](https://github.com/yohana-samile/shop-management-system/assets/99715781/fd7903b0-eb54-4a54-8f6b-81ac25afac06)
+
+fig 3. staff registered
+
+![Screenshot from 2023-11-16 20-07-16](https://github.com/yohana-samile/shop-management-system/assets/99715781/8eaf82fe-8c3d-473f-95ce-cc505e85f9a0)
+
+fig 4. staff registered
+
+![Screenshot from 2023-11-16 20-07-36](https://github.com/yohana-samile/shop-management-system/assets/99715781/ff8edacc-0c19-40f2-99a4-c86a2cab3252)
+
+fig 5. staff roles
+
+![Screenshot from 2023-11-16 20-08-23](https://github.com/yohana-samile/shop-management-system/assets/99715781/f9fd14c4-0d4b-403c-8a0e-3036d6d63605)
+
+fig 6. products on curt
+
+![Screenshot from 2023-11-16 20-08-37](https://github.com/yohana-samile/shop-management-system/assets/99715781/22f76939-e0cd-4d70-b546-f5c689184a58)
+
+fig 7. products purchasing history
+
+![Screenshot from 2023-11-16 20-09-28](https://github.com/yohana-samile/shop-management-system/assets/99715781/d85ab963-a41f-4fe5-a50d-e7494b6f5fee)
+
+fig 8. products registration via form and excel upload
+
+![Screenshot from 2023-11-16 20-10-20](https://github.com/yohana-samile/shop-management-system/assets/99715781/2d0689f8-cbf2-4874-a51b-649b200bedb4)
+
+fig 9. products cutegory registration
+
+![Screenshot from 2023-11-16 20-11-09](https://github.com/yohana-samile/shop-management-system/assets/99715781/d17639bb-e918-4eb5-a0fe-918cd39a061f)
+
+fig 10. products units registration
 
 THIS IS GROUP ASSIGNMENT DEVELOPED BY Developer Samile
