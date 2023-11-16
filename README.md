@@ -55,4 +55,4 @@ The systems should enable the owner and the manager to see various reports, such
 the staff (categories according to roles, gender, etc); daily sales; etc.
 
 
-THIS IS GROUP ASSIGNMENT DEVELOPED BY samile web solution
+THIS IS GROUP ASSIGNMENT DEVELOPED BY Developer Samile
